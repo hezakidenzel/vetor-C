@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main () {
+   int i;
+   int n_alunos = 0;
+   int loop = 1;
+
+    while(loop = 1){
+    printf("Entre com a quantidade de  alunos entre o valor 1 ate 50\n");
+    scanf("%d", &n_alunos);
+    float notas[ n_alunos];
+
+    if (n_alunos <= 0 || n_alunos > 50) {
+        printf("Valor invalido!!\n");
+        loop = 1;
+      }
+
+    else{
+
+    for ( i = 0; i < n_alunos; i++ ) {
+    printf("Entre com a %d nota do aluno:\n", i+1);
+    scanf("%f", &notas[i]);
+    } //fim for entrada de notas
+
+    for (i = n_alunos -1; i >=0; i-- ) {
+    printf("Nota %d = %4.2f\n", i+1, notas[i] );
+    }  //Fim for array reverso
+
+    loop = 0;
+
+        } // fim else
+
+      } //fim while
+
+   return 0;
+}
